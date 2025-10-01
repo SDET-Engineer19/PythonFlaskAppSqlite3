@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Management</title>
+</head>
+<body>
+    <h2>Add Employee</h2>
+    <form method="POST" action="/add">
+        <input type="text" name="emp_id" placeholder="Employee ID" required><br>
+        <input type="text" name="name" placeholder="Name" required><br>
+        <input type="number" name="salary" placeholder="Salary" required><br>
+        <input type="text" name="designation" placeholder="Designation" required><br>
+        <button type="submit">Add Employee</button>
+    </form>
+
+    <h2>Update Role</h2>
+    <form method="POST" action="/update">
+        <input type="text" name="emp_id" placeholder="Employee ID" required><br>
+        <input type="text" name="designation" placeholder="New Designation" required><br>
+        <button type="submit">Update Role</button>
+    </form>
+
+    <h2>Employee List</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th><th>Name</th><th>Salary</th><th>Designation</th>
+        </tr>
+        {% for emp in employees %}
+        <tr>
+            <td>{{ emp[0] }}</td>
+            <td>{{ emp[1] }}</td>
+            <td>{{ emp[2] }}</td>
+            <td>{{ emp[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
