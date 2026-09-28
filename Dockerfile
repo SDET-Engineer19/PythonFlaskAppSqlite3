@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 8000
 
 # Run the app
-CMD ["python", "employee_app.py"]
+CMD ["python", "employeeInfo.py"]
